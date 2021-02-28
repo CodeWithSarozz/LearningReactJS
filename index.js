@@ -9,10 +9,10 @@ varName = "Sarozz Shrestha"; //varaible name can be changed later on too..
 const constName = "Saroj Shrestha"; //(Here, variable name constName can't be change afterthen any where in file)
 
 //let = let stay's within its surrounding scope
-// if (true) {
-//     let letName = "Saroj Shrestha";
-//     //alert(letName); //letName can be call with in if statement only
-// }
+if (true) {
+    let letName = "Saroj Shrestha";
+    //alert(letName); //letName can be call with in if statement only
+}
 
 //alert(letName); //cannot call letName here because letName variable is within if conditon only
 
@@ -32,37 +32,37 @@ const constName = "Saroj Shrestha"; //(Here, variable name constName can't be ch
 
 //---default parameter--
 
-// function welcome(user = "User", message = "Good Morning !") {
-//     alert(`Hello ${user}, ${message}`);
-// }
+function welcome(user = "User", message = "Good Morning !") {
+    alert(`Hello ${user}, ${message}`);
+}
 
 // welcome("Saroj", "How are you?");
 //welcome();
 
 //---arrow-function---
 
-// function greeting(message) {
-//     return alert(`${message} everyone!`);
-// }
+function greeting(message) {
+    return alert(`${message} everyone!`);
+}
 
 //greeting('Good Morning');
 
 //in arrow function
-// let arrowFunctionGreeting = message => alert(`${message} everyone!`);
+let arrowFunctionGreeting = message => alert(`${message} everyone!`);
 
 //arrowFunctionGreeting('Good Evening');
 
-// let createBlog = (title, body) => {
-//     if (!title) {
-//         throw new Error('Title is required');
-//     }
+let createBlog = (title, body) => {
+    if (!title) {
+        throw new Error('Title is required');
+    }
 
-//     if (!body) {
-//         throw new Error('Body is required');
-//     }
+    if (!body) {
+        throw new Error('Body is required');
+    }
 
-//     return alert(`${title} - ${body}`);
-// };
+    return alert(`${title} - ${body}`);
+};
 
 //createBlog('This is title', 'This is body for an arrow function.');
 
@@ -168,3 +168,18 @@ var rivers = ['SunKoshi', 'Tamakoshi', 'SaptaKoshi'];
 var [first, ...rest] = rivers;
 
 // console.log(rest);
+
+//---classes---
+
+function Holiday(destination, days) {
+    this.destination = destination;
+    this.days = days;
+}
+
+Holiday.prototype.info = function() {
+    // console.log(this.destination + " | " + this.days + " days");
+};
+
+var classNepal = new Holiday("Nepal", 30);
+
+// console.log(classNepal);
