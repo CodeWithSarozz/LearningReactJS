@@ -14,14 +14,21 @@
 
 //alert(letName); //cannot call letName here because letName variable is within if conditon only
 
-let fname = "Saroj";
-let lname = "Shrestha";
-let age = prompt('Enter Age ?');
+//let fname = "Saroj";
+//let lname = "Shrestha";
+//let age = prompt('Enter Age ?');
 
 //old way
-let oldResult = fname + ' ' + lname + ' is ' + age + ' years old. (result using old ways)';
+//let oldResult = fname + ' ' + lname + ' is ' + age + ' years old. (result using old ways)';
 
 //using template string //also added in ES6
-let newResult = `${fname} ${lname} is ${age} years old. (result using template string)`; // use of backticks(`) and ${varaiable name}
+//let newResult = `${fname} ${lname} is ${age} years old. (result using template string)`; // use of backticks(`) and ${varaiable name}
 
-alert(newResult);
+//alert(newResult);
+
+function welcome(user = "User", message = "Good Morning !") {
+    alert(`Hello ${user}, ${message}`);
+}
+
+// welcome("Saroj", "How are you?");
+welcome();
