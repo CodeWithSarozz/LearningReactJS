@@ -108,10 +108,14 @@ morning = 'Run';
 // };
 
 let uniStudent = ({ name, university }) => {
-    alert(`${name} from ${university}`);
+    // alert(`${name} from ${university}`);
 };
 
 uniStudent({
     name: 'Sarozz Shrestha',
     university: 'Leeds Beckett University'
 });
+
+let [, secondMountain, , fourthMountain] = ['Everest', 'Fish Tail', 'Annapurna', 'Langtang'];
+
+console.log(secondMountain, '-', fourthMountain);
