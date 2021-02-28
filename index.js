@@ -139,3 +139,32 @@ var adventureClimbing = {
 };
 
 // adventureClimbing.output();
+
+
+//---Spread Operators---
+
+var mountains = ['Everest', 'Fish Tail', 'Annapurna', 'Langtang'];
+var mountainsFromJapan = ['Fuji'];
+
+var allMountains = [...mountains, ...mountainsFromJapan]; //... is a spread operators
+
+// console.log(allMountains);
+
+var dayLaunch = {
+    breakfast: 'toast with milk',
+    lauch: 'rice with chicken curry'
+};
+
+var nightLaunch = {
+    dinner: 'noodle soup'
+};
+
+var picnic = {...dayLaunch, ...nightLaunch };
+
+// console.log(picnic);
+
+// rest
+var rivers = ['SunKoshi', 'Tamakoshi', 'SaptaKoshi'];
+var [first, ...rest] = rivers;
+
+// console.log(rest);
