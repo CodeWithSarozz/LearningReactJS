@@ -118,4 +118,24 @@ uniStudent({
 
 let [, secondMountain, , fourthMountain] = ['Everest', 'Fish Tail', 'Annapurna', 'Langtang'];
 
-console.log(secondMountain, '-', fourthMountain);
+// console.log(secondMountain, '-', fourthMountain);
+
+//---Restructuring Object---
+
+var name = 'Everest';
+var height = 8848;
+var output = function() {
+    console.log(`Mt. ${this.name} is ${this.height} meter tall.`);
+};
+
+// var adventureClimbing = { name, height, output };
+
+var adventureClimbing = {
+    name: 'Everest',
+    height: 8848,
+    output() {
+        console.log(`Mt. ${this.name} is ${this.height} meter tall.`);
+    }
+};
+
+// adventureClimbing.output();
