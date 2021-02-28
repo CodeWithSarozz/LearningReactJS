@@ -1,7 +1,7 @@
 //---Variables---
 
-var name = "Saroj Shrestha";
-name = "Sarozz Shrestha"; //varaible name can be changed later on too..
+var varName = "Saroj Shrestha";
+varName = "Sarozz Shrestha"; //varaible name can be changed later on too..
 
 //After ES 6
 
@@ -85,4 +85,33 @@ let nepal = {
     }
 };
 
-nepal.printWithDash();
+//nepal.printWithDash();
+
+//---Destructuring Object---
+
+let thingsToDo = {
+    morning: "Excersise",
+    afternoon: "Work",
+    evening: "Code",
+    night: ["Sleep", "Dream"]
+};
+
+let { morning, afternoon, evening, night } = thingsToDo; //Destructuring
+
+morning = 'Run';
+
+// console.log(morning, ' - ', evening);
+
+// let uniStudent = student => {
+//     let { name, university } = student;
+//     alert(`${name} from ${university}`);
+// };
+
+let uniStudent = ({ name, university }) => {
+    alert(`${name} from ${university}`);
+};
+
+uniStudent({
+    name: 'Sarozz Shrestha',
+    university: 'Leeds Beckett University'
+});
